@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">People</string>
+    <string name="apellido">LastName</string>
+    <string name="bailar">Dance</string>
+    <string name="borrar">Delete</string>
+    <string name="edad">Age</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="leer">Read</string>
+    <string name="listar">List</string>
+    <string name="nombre">Name</string>
+    <string name="numero">N°</string>
+    <string name="programar">Develop</string>
+    <string name="registrar">Registry</string>
+    <string name="titulo">REGISTRY</string>
+    <string name="guardar">Sucessfully Saved!</string>
+</resources>

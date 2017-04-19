@@ -12,6 +12,7 @@
     <string name="numero">N°</string>
     <string name="hobbies">Pasatiempos</string>
     <string name="listar">Listar</string>
+    <string name="guardar">Guardado Satisfactoriamente!</string>
     <string-array name="opciones">
         <item>@string/registrar</item>
         <item>@string/listar</item>
