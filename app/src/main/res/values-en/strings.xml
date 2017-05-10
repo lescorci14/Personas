@@ -14,4 +14,5 @@
     <string name="registrar">Registry</string>
     <string name="titulo">REGISTRY</string>
     <string name="guardar">Sucessfully Saved!</string>
+    <string name="mostrar">Show in Table</string>
 </resources>
