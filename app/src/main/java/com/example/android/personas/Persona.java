@@ -88,9 +88,57 @@ public class Persona {
         nuevaPersona.put("edad",String.valueOf(this.getEdad()));
         nuevaPersona.put("pasatiempo",this.getPasatiempos());
 
-        db.insert("Personas",null,nuevaPersona);
+        db.insert("Personas",null,nuevaPersona);*/
 
-        db.close();*/
+        db.close();
+        //Datos.guardar(this);
+    }
+
+    public void modificar(Context contexto){
+        SQLiteDatabase db;
+        String sql;
+
+        PersonasSQLiteOpenHelper aux = new PersonasSQLiteOpenHelper(contexto,"DBPersonas",null,1);
+        db = aux.getWritableDatabase();
+
+        sql="UPDATE Personas set foto="+this.getFoto()+"',apellido='"+this.getApellido()+"',edad='"+this.getEdad()+"',pasatiempo='"+this.getPasatiempos()+"' where nombre like '%"+this.getNombre()+"%'";
+        db.execSQL(sql);
+
+
+        /*ContentValues nuevaPersona = new ContentValues();
+        nuevaPersona.put("foto",this.getFoto());
+        nuevaPersona.put("nombre",this.getNombre());
+        nuevaPersona.put("apellido",this.getApellido());
+        nuevaPersona.put("edad",String.valueOf(this.getEdad()));
+        nuevaPersona.put("pasatiempo",this.getPasatiempos());
+
+        db.insert("Personas",null,nuevaPersona);*/
+
+        db.close();
+        //Datos.guardar(this);
+    }
+
+    public void eliminar(Context contexto){
+        SQLiteDatabase db;
+        String sql;
+
+        PersonasSQLiteOpenHelper aux = new PersonasSQLiteOpenHelper(contexto,"DBPersonas",null,1);
+        db = aux.getWritableDatabase();
+
+        sql="DELETE FROM Personas where nombre like '%"+this.getNombre()+"%'";
+        db.execSQL(sql);
+
+
+        /*ContentValues nuevaPersona = new ContentValues();
+        nuevaPersona.put("foto",this.getFoto());
+        nuevaPersona.put("nombre",this.getNombre());
+        nuevaPersona.put("apellido",this.getApellido());
+        nuevaPersona.put("edad",String.valueOf(this.getEdad()));
+        nuevaPersona.put("pasatiempo",this.getPasatiempos());
+
+        db.insert("Personas",null,nuevaPersona);*/
+
+        db.close();
         //Datos.guardar(this);
     }
 }
